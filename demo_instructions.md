@@ -1,25 +1,3 @@
-# Hướng dẫn demo đồ án Smart E-Mobility Hub
-
-Mình đã thêm Demo đồ án vào menu web của Operator. Bản demo có nút Màn trước, Màn tiếp theo và hướng dẫn ngay trên từng màn hình. Các thao tác sử dụng giao diện và API hiện có của hệ thống.
-| Màn | Thao tác trình bày | Kết quả cần quan sát |
-| --- | --- | --- |
-| 1. Tạo yêu cầu sạc | Chọn trạm, chọn xe dùng chung và gửi yêu cầu. | Hệ thống gán cổng. Khi simulator hoạt động, phiên chuyển sang đang sạc và phần trăm pin cập nhật. |
-| 2. Lập lại lịch sạc | Báo hỏng cổng vừa được gán, sau đó đánh dấu đã sửa xong. | Cổng chuyển sang sửa chữa. Hệ thống tính lại lịch và cập nhật phân bổ. |
-| 3. Xử lý sự cố xe | Báo hỏng một xe khác, kiểm tra, chuyển bảo trì rồi xác nhận đã xử lý. | Chi tiết sự cố hiển thị lịch sử từ REPORTED đến RESOLVED. |
-| 4. Mô phỏng What-if | Giả lập hỏng một cổng tại trạm đang hoạt động. | Màn hình hiển thị số liệu trước/sau và đề xuất xử lý. |
-
-## Mở bản demo
-
-Chạy PowerShell từ thư mục dự án:
-```powershell
-cd D:\code\cnpm\SMART-E-MOBILITY-HUB-MANAGEMENT-SYSTEM
-docker compose up -d --build
-```
-
-Mở web tại localhost:8081, đăng nhập bằng operator@emobility.vn với mật khẩu demo Operator@123, rồi chọn Demo đồ án. Màn 1 và 2 dùng cùng một trạm, nên ghi lại mã cổng và mã yêu cầu sạc trước khi chuyển màn.
-
-Đã xác minh web build thành công. Docker Engine không truy cập được từ phiên này, nên mình chưa xác nhận được toàn bộ luồng API, cơ sở dữ liệu và simulator khi thao tác trực tiếp. Mình chọn triển khai demo trên web bằng tài khoản Operator để trình bày cả bốn màn trong một phiên đăng nhập. DemoPage.jsx
-
 ## Chuẩn bị trước buổi demo
 
 Mở ba phiên trình duyệt độc lập để giữ đăng nhập theo vai trò. Nên để phiên sinh viên mở sẵn ở Thông báo khi chuyển sang demo TC-11.
